@@ -32,18 +32,9 @@ func parseArgs() {
 	flag.Parse()
 }
 
-//检测字符串中的空格
-func test1() {
-	for i := 0; i < len(CharStr); i++ {
-		if CharStr[i] != ' ' {
-			fmt.Printf("%c", CharStr[i])
-		}
-	}
-}
-
 func generatePasswd() string {
 	//初始化密码切片
-	var passwd []byte = make([]byte, length, length)
+	var passwd []byte = make([]byte, length)
 	//源字符串
 	var sourceStr string
 	//判断字符类型,如果是数字
